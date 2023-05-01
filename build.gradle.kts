@@ -26,6 +26,7 @@ dependencies {
     implementation("io.micronaut:micronaut-validation")
     implementation("io.micronaut.graphql:micronaut-graphql")
     runtimeOnly("com.fasterxml.jackson.module:jackson-module-kotlin")
+    implementation("software.amazon.awssdk:dynamodb")
 }
 
 
