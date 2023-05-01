@@ -17,7 +17,7 @@ class UserController(private val userService: UserService) {
     // in kotlin you can pass in a param without naming it if it's the first expected param
     // uri is not, so it's gotta be named
     @Get(uri = "/{id}")
-    fun userInfoById(@PathVariable id: Int) = userService.getUserInfoById(id)
+    fun userInfoById(@PathVariable id: String) = userService.getUserInfoById(id)
 
     @Get(uri = "/{name}")
     fun userInfoByName(@PathVariable name: String) = userService.getUserInfoByName(name)

@@ -1,3 +1,5 @@
+import org.jetbrains.kotlin.ir.backend.js.compile
+
 plugins {
     id("org.jetbrains.kotlin.jvm") version "1.6.21"
     id("org.jetbrains.kotlin.kapt") version "1.6.21"
@@ -27,6 +29,9 @@ dependencies {
     implementation("io.micronaut.graphql:micronaut-graphql")
     runtimeOnly("com.fasterxml.jackson.module:jackson-module-kotlin")
     implementation("software.amazon.awssdk:dynamodb")
+    compileOnly("io.micronaut.aws:micronaut-aws-sdk-v2")
+    compileOnly("software.amazon.awssdk:dynamodb")
+    implementation ("software.amazon.awssdk:dynamodb-enhanced")
 }
 
 

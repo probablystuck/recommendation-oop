@@ -1,9 +1,13 @@
 package com.ninerules.model
 
+import software.amazon.awssdk.enhanced.dynamodb.mapper.annotations.DynamoDbBean
+import software.amazon.awssdk.enhanced.dynamodb.mapper.annotations.DynamoDbPartitionKey
+
+@DynamoDbBean
 data class User(
-//    val id: String,
-    val id: Int,
-    val name: String,
+    @get:DynamoDbPartitionKey
+    var id: String? = null,
+    var name: String? = null,
     // list of ids of RecommendationLists
-    val lists: List<String>
+    var lists: List<String>? = emptyList()
 )
